@@ -1,0 +1,100 @@
+,model,test_acc_score,test_precision_score,test_recall_score,train_acc_score,best_score_of_CV,best_params,model_instance,preds
+0,knn,0.8125,0.81802398989899,0.8125,0.8125,0.8125,"{'kneighborsclassifier__weights': 'uniform', 'kneighborsclassifier__n_neighbors': 32}","Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('num_pipe',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='constant')),
+                                                                  ('minmaxscaler',
+                                                                   MinMaxScaler())]),
+                                                  Index(['BB diameter', 'BB length', 'BB textfield', 'BELTorCHAIN', 'BSD front',
+       'BSD rear', 'CHAINSTAYbrdgCheck', 'CHAINSTAYbrdgdia1',
+       'CHAINSTAYbrdgshift', 'CS textfield', 'Chain stay...
+       'Seatpost LENGTH', 'Stack', 'Stem kind', 'Top tube type',
+       'Wall thickness Chain stay', 'Wall thickness Seat stay',
+       'Wall thickness Seat tube', 'Wheel cut', 'Wheel width front',
+       'Wheel width rear', 'bottle DOWNTUBE0 show', 'bottle SEATTUBE0 show',
+       'csd', 'dtd', 'ssd', 'ttd'],
+      dtype='object'))])),
+                ('standardscaler', StandardScaler(with_mean=False)),
+                ('kneighborsclassifier', KNeighborsClassifier(n_neighbors=32))])","[0 1 1 1 1 1 0 1 0 1 0 0 1 1 0 0 1 0 1 1 0 0 1 0 0 1 0 0 1 1 1 1 1 0 1 0 0
+ 1 1 0 1 1 1 1 0 0 1 0 0 1 1 1 0 0 1 1 1 0 1 0 0 1 1 1 1 1 0 1 1 0 0 1 0 0
+ 0 0 0 1 1 0]"
+1,mlp,0.8,0.8010006253908694,0.8,0.7625,0.8,"{'mlpclassifier__max_iter': 3000, 'mlpclassifier__hidden_layer_sizes': 200}","Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('num_pipe',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='constant')),
+                                                                  ('minmaxscaler',
+                                                                   MinMaxScaler())]),
+                                                  Index(['BB diameter', 'BB length', 'BB textfield', 'BELTorCHAIN', 'BSD front',
+       'BSD rear', 'CHAINSTAYbrdgCheck', 'CHAINSTAYbrdgdia1',
+       'CHAINSTAYbrdgshift', 'CS textfield', 'Chain stay...
+       'Seatpost LENGTH', 'Stack', 'Stem kind', 'Top tube type',
+       'Wall thickness Chain stay', 'Wall thickness Seat stay',
+       'Wall thickness Seat tube', 'Wheel cut', 'Wheel width front',
+       'Wheel width rear', 'bottle DOWNTUBE0 show', 'bottle SEATTUBE0 show',
+       'csd', 'dtd', 'ssd', 'ttd'],
+      dtype='object'))])),
+                ('standardscaler', StandardScaler(with_mean=False)),
+                ('mlpclassifier',
+                 MLPClassifier(hidden_layer_sizes=200, max_iter=3000))])","[0 1 1 1 1 1 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 0 0 1 0 1 1 1 1 0 1 0 0
+ 1 1 0 1 1 1 1 1 0 1 0 0 0 1 1 0 0 1 1 1 0 1 0 0 1 1 1 1 1 0 1 1 0 0 0 0 0
+ 0 0 1 1 0 0]"
+2,rforest,0.8,0.8005028284098051,0.8,0.8,0.8,"{'randomforestclassifier__warm_start': True, 'randomforestclassifier__n_estimators': 200, 'randomforestclassifier__min_samples_leaf': 9, 'randomforestclassifier__max_depth': 5, 'randomforestclassifier__criterion': 'entropy'}","Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('num_pipe',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='constant')),
+                                                                  ('minmaxscaler',
+                                                                   MinMaxScaler())]),
+                                                  Index(['BB diameter', 'BB length', 'BB textfield', 'BELTorCHAIN', 'BSD front',
+       'BSD rear', 'CHAINSTAYbrdgCheck', 'CHAINSTAYbrdgdia1',
+       'CHAINSTAYbrdgshift', 'CS textfield', 'Chain stay...
+       'Wall thickness Seat tube', 'Wheel cut', 'Wheel width front',
+       'Wheel width rear', 'bottle DOWNTUBE0 show', 'bottle SEATTUBE0 show',
+       'csd', 'dtd', 'ssd', 'ttd'],
+      dtype='object'))])),
+                ('standardscaler', StandardScaler(with_mean=False)),
+                ('randomforestclassifier',
+                 RandomForestClassifier(criterion='entropy', max_depth=5,
+                                        min_samples_leaf=9, n_estimators=200,
+                                        random_state=123, warm_start=True))])","[0 0 1 1 1 0 0 1 0 1 0 0 1 1 1 0 1 0 0 1 0 0 1 0 0 1 0 0 1 1 1 0 1 0 0 0 0
+ 1 1 0 1 1 1 1 0 0 1 0 0 0 0 1 0 0 0 1 1 0 1 0 0 1 1 1 1 1 0 1 1 0 0 1 0 0
+ 0 0 0 1 1 0]"
+3,dt,0.6875,0.6878125,0.6875,0.6875,0.6875,"{'decisiontreeclassifier__min_samples_split': 5, 'decisiontreeclassifier__min_samples_leaf': 4, 'decisiontreeclassifier__max_depth': 4, 'decisiontreeclassifier__criterion': 'entropy'}","Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('num_pipe',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='constant')),
+                                                                  ('minmaxscaler',
+                                                                   MinMaxScaler())]),
+                                                  Index(['BB diameter', 'BB length', 'BB textfield', 'BELTorCHAIN', 'BSD front',
+       'BSD rear', 'CHAINSTAYbrdgCheck', 'CHAINSTAYbrdgdia1',
+       'CHAINSTAYbrdgshift', 'CS textfield', 'Chain stay...
+       'Wall thickness Seat tube', 'Wheel cut', 'Wheel width front',
+       'Wheel width rear', 'bottle DOWNTUBE0 show', 'bottle SEATTUBE0 show',
+       'csd', 'dtd', 'ssd', 'ttd'],
+      dtype='object'))])),
+                ('standardscaler', StandardScaler(with_mean=False)),
+                ('decisiontreeclassifier',
+                 DecisionTreeClassifier(criterion='entropy', max_depth=4,
+                                        min_samples_leaf=4, min_samples_split=5,
+                                        random_state=123))])","[0 1 1 1 1 0 1 1 0 1 1 1 1 1 0 0 1 0 0 0 0 0 1 0 1 1 0 1 0 1 1 0 1 0 1 0 0
+ 1 1 0 1 1 1 1 0 0 0 0 0 0 1 1 0 0 0 1 0 0 1 0 1 1 0 1 1 1 0 1 1 0 0 1 0 0
+ 0 0 0 1 1 0]"
+4,lr,0.7875,0.7895206766917292,0.7875,0.7875,0.7875,"{'logisticregression__warm_start': False, 'logisticregression__tol': 1e-05, 'logisticregression__solver': 'saga', 'logisticregression__penalty': 'l1', 'logisticregression__C': 11.288378916846883}","Pipeline(steps=[('columntransformer',
+                 ColumnTransformer(transformers=[('num_pipe',
+                                                  Pipeline(steps=[('simpleimputer',
+                                                                   SimpleImputer(strategy='constant')),
+                                                                  ('minmaxscaler',
+                                                                   MinMaxScaler())]),
+                                                  Index(['BB diameter', 'BB length', 'BB textfield', 'BELTorCHAIN', 'BSD front',
+       'BSD rear', 'CHAINSTAYbrdgCheck', 'CHAINSTAYbrdgdia1',
+       'CHAINSTAYbrdgshift', 'CS textfield', 'Chain stay...
+       'Wall thickness Chain stay', 'Wall thickness Seat stay',
+       'Wall thickness Seat tube', 'Wheel cut', 'Wheel width front',
+       'Wheel width rear', 'bottle DOWNTUBE0 show', 'bottle SEATTUBE0 show',
+       'csd', 'dtd', 'ssd', 'ttd'],
+      dtype='object'))])),
+                ('standardscaler', StandardScaler(with_mean=False)),
+                ('logisticregression',
+                 LogisticRegression(C=11.288378916846883, penalty='l1',
+                                    solver='saga', tol=1e-05))])","[0 1 1 1 1 1 0 1 0 1 0 0 1 1 0 0 1 0 0 1 0 0 1 0 0 1 0 1 0 1 1 1 1 0 1 0 0
+ 1 1 0 1 1 1 1 1 0 1 0 0 0 1 1 0 0 1 1 1 0 1 0 0 1 1 1 1 1 0 1 1 0 0 0 0 0
+ 0 0 1 1 0 0]"
