@@ -1,6 +1,13 @@
 # Master Thesis:  
 **Guiding the Latent Space of Generative Models Based on Subjective Human Factors**
 
+<p align="left">
+  <img src="assets/bike1-towards-higher-usability.gif" width="250">
+  <img src="assets/bike2-towards-higher-usability.gif" width="250">
+</p>
+
+
+
 ## Overview
 This repository contains the code and resources for Fabien Chiotti's on going master’s thesis titled **"Guiding the Latent Space of Generative Models Based on Subjective Human Factors"**. The project explores how human input, particularly subjective factors such as usability and design preferences, can guide the latent space of generative AI models, improving their outputs for real-world applications. 
 
